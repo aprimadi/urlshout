@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Tony Franco Rails Code Test</title>
+  
+  <%= javascript_include_tag 'jquery-1.7.1.min' %>
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'main' %>
+  
+  <script type="text/javascript">
+    var url_lists = [
+      <% @urls.each do |url| %>
+        "<%= url.url %>",
+      <% end %>
+    ];
+    var to_sync = [];
+    
+    $(document).ready(function () {
+      bindUrlInput();
+      
+      // sync to db
+      var interval_id = window.setInterval(sync_url_to_db, 15000);  // 15 seconds
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div id="content">
+      <div id="url-input-form">
+        <fieldset>
+          <label>Website URL: </label>
+          <div class="input">
+            <input class="text" id="url-input" type="text" />
+            <div id="url-display-area">
+              <ul id="url-list">
+                <% @urls.each do |url| %>
+                  <li><%= url.url %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

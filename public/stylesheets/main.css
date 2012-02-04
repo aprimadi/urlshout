@@ -1,0 +1,68 @@
+
+/* RESET: =reset
+------------------------------------------------------------*/
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+/* GENERAL: =general
+------------------------------------------------------------*/
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  -webkit-text-stroke: 1px transparent;
+  color: white;
+  background: #222;
+}
+
+.container {
+  margin: auto;
+  width: 950px;
+}
+
+#content {
+  margin: 10px 0;
+}
+
+/* URL Input Form 
+------------------------------------------------------------*/
+#url-input-form fieldset {
+  border: none;
+}
+
+#url-input-form .input {
+  float: left;
+}
+
+#url-input-form input.text {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font: bold 14px 'Arial', 'Helvetica', sans-serif;
+  margin-bottom: 8px;
+  padding: 12px;
+  width: 260px;
+}
+
+#url-input-form label {
+  color: white;
+  float: left;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+  margin: 12px 10px 0 0;
+  width: 107px;
+}
+
+/* URL Display Area
+------------------------------------------------------------*/
+#url-display-area {
+}
+
+#url-display-area ul {
+  list-style-type: none;
+  font: bold 13px 'Arial', 'Helvetica', sans-serif;
+  line-height: 18px;
+  color: #999;
+}
